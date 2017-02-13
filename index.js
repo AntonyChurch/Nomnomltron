@@ -29,3 +29,26 @@ var saveFile = function(){
        });
     }); 
 };
+
+var openFile = function(){
+    dialog.showOpenDialog(function (fileName) {
+        // fileNames is an array that contains all the selected
+       if(fileName === undefined){
+            console.log("No file selected");
+       }else{
+            readFile(fileName[0]);
+       }
+    });
+};
+
+var readFile =function(filepath){
+    fs.readFile(filepath, 'utf-8', function (err, data) {
+          if(err){
+              alert("An error ocurred reading the file :" + err.message);
+              return;
+          }
+          // Change how to handle the file content
+          text.value = data;
+          updateCanvas();
+    });
+};
