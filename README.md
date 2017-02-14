@@ -8,9 +8,13 @@ Nomnomltron is an application that brings the UML rendering technology of [nomno
 
 ##Run instructions
 On first run navigate into the Nomnomltron directory and run:
-`npm install nomnoml`
+
+`npm install`
+
 And then run:
+
 `electron .`
+
 
 All subsequent runs you can just run:
 `electron .`
